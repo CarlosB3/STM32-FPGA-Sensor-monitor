@@ -26,3 +26,11 @@ The FPGA implements VHDL logic for UART communication, alert-state control, aler
 
 ## System Architecture
 ![System Block Diagram](docs/Block%20Diagram.png)
+
+## Project Status
+
+Current prototype supports multi-sensor acquisition, OLED status display,
+STM32-to-FPGA UART communication, FPGA alert-state monitoring, alert-history
+latching, and heartbeat fault detection.
+
+Further testing, documentation, and hardware packaging are in progress.
