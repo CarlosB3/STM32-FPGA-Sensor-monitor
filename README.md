@@ -25,25 +25,4 @@ The FPGA implements VHDL logic for UART communication, alert-state control, aler
 | USB-to-TTL Adapter | UART debugging | UART |
 
 ## System Architecture
-
-```text
-VL53L1X ───── I2C ───────────────► STM32H753
-                                      │
-LSM6DS3 ───── SPI ────────────────►   │
-                                      │
-BME280 ──┐                            │
-SHT41  ──┤                            │
-OLED 1 ──┤                            │
-OLED 2 ──┤── I2C MUX ─── I2C ─────► │
-OLED 3 ──┤                            │
-OLED 4 ──┘                            │
-                                      │
-                                      │ UART
-                                      ▼
-                                 Zybo Z7-20
-                                  FPGA/VHDL
-                                      │
-                                      ▼
-                                Onboard LEDs
-
-STM32H753 ─── UART Debug ───► USB-to-TTL ───► PC
+![System Block Diagram](docs/Block%20Diagram.png)
